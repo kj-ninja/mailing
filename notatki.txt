@@ -1,0 +1,62 @@
+Szablony
+Konstrukcję newslettera najlepiej oprzeć na tabeli.
+Sumaryczna szerokość komórek powinna być równa szerokości tabeli.
+
+Wyśrodkowanie
+Warto wyśrodkować tabelę.
+Dobrze też jest usunąć zbędne marginesy między wierszami.
+
+Komórki
+Dla komórek, które zawierają obrazek, warto ustawić width oraz line-height: 0.
+Dzięki temu unikniemy odstępów pomiędzy fragmentami rysunku.
+Można również ustawić height.
+
+Maksymalna szerokość maila to 640px
+Aplikacje pocztowe nie udostępniają nam całej powierzchni monitora na wyświetlenie maila.
+Zawsze znajdzie się coś obok (np. reklama), zwłaszcza na aplikacjach webowych.
+Efektem tego jest fakt, że tylko niewielka część ekranu pozostaje na wyświetlenie maila.
+
+Style CSS – inline
+Jak to zrobić?
+Nie dodajemy styli zewnętrznych. Staramy się również nie stosować ich w sekcji head.
+Wiele programów pocztowych nie pozwala na linkowanie zewnętrznych arkuszy styli.
+Pomija także te, które są zawarte w sekcji head oraz w sekcji body.
+Rezygnujemy ze stosowania skróconych wersji dla właściwości CSS.
+Piszemy np. padding-left: 20px; zamiast padding: 0 0 0 20px;
+
+Gdzie najlepiej pobierać obrazki?
+Obrazki najlepiej pobierać z absolutnych adresów URL. Przed wysyłką kampanii obrazki powinny zostać umieszczone
+na zewnętrznych serwerach i stamtąd pobierane do mailingu.Obrazki umieszczone na serwerze powodują natomiast, że program
+pocztowy zapyta nas, czy wyświetlić zdalną wiadomość. Jest to pewnego rodzaju problem.
+Z drugiej strony unikamy dużego rozmiaru wiadomości, dzięki czemu nasz mail nie jest traktowany jako spam.
+
+Obrazki powinny być dostosowane wielkością oraz szerokością do wymiarów komórki tabeli,w której się znajdują.
+Wymiary obrazka ustawiamy za pomocą znaczników HTML:
+width
+height
+Wymiary obrazka ustawiamy także za pomocą właściwości CSS (np. style="width:100px; height: 100px;").
+Ustawiamy atrybut alt
+Obrazki w programach pocztowych zazwyczaj nie wyświetlają się domyślnie.
+Użytkownik musi sam je pobrać. Zanim to jednak zrobi, powinien widzieć opisy obrazków.
+Tekst w atrybucie alt można stylować za pomocą CSS.
+Zalecana długość tekstu w alt to 14 znaków.
+Wielkość obrazka
+Nie wstawiamy do tabeli jednego wielkiego obrazka.
+Mailing może nie przejść testu spamu. Zaleca się pociąć go na mniejsze kawałki w poziomie.
+Pamiętajmy, że programy pocztowe mają różne i bardzo restrykcyjne warunki odnośnie wielkości całego mailingu.
+Obrazki należy optymalizować do jak najmniejszych rozmiarów.
+Ustawiamy atrybut title oraz border
+Do każdego tagu img dołączamy oprócz atrybutu alt również następujące atrybuty:
+title,
+border.
+Atrybutu title używamy w celu wyświetlenia informacji po najechaniu kursorem na obrazek.
+Gdy atrybut border ustawiamy na 0, to wyeliminujemy domyślny obrys występujący w niektórych przeglądarkach.
+
+Linki w newsletterze
+Każdy link stylujemy osobno.
+Do linków dodajemy następujące atrybuty
+i wartości:
+title="...",
+target="_blank".
+Dzięki atrybutowi title odbiorca wie, dokąd prowadzi link.
+Atrybut target ustawiony na _blank przeniesie użytkownika pod wskazany adres, ale strona otworzy się w nowym oknie.
